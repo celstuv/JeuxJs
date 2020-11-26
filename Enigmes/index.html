@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Enigmes</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!--******************************* Menu Navbar *******************************-->
+    <div class="menu" id="Top">
+      <ul class="nav justify-content-center elegant-color py-2">
+        <li class="nav-item">
+          <a class="nav-link active" href="#!"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Top">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Enigmes">Enigmes</a>
+        </li>
+      </ul>
+    </div>
+    <!--******************************* Caroussel *******************************-->
+    <div class="container-fluid">
+      <div id="carousel" onclick="carousel();">
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--******************************* Enigmes *******************************-->
+  <section id="Enigmes">
+    <h1></h1>
+    <div class="container-fluid my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-8 col-sm-6">
+          <form id="devinette1" action="" method="" class="text-center">
+            <label for="question1">Je suis toujours devant tout le monde, mais personne ne peut me voir. Qui suis-je ?</label><br>
+            <input id="q1" type="text" name="question1" value="">
+            <input id="q1hidden" type="hidden" name="question1hidden" value=""><br>
+            <span id="aideReponse"></span>
+            <p id="tentative1"></p>
+            <button type="submit" name="button" id="btn" class="btn btn-elegant">valider</button><br>
+          </form>
+          <br>
+          <form id="devinette2" action="" method="" class="text-center">
+            <label for="question2">Je suis noir, je deviens rouge, et je finis blanc...</label><br>
+            <input id="q2" type="text" name="question2" value="">
+            <input id="q2hidden" type="hidden" name="question2hidden" value=""><br>
+            <span id="aideReponse2"></span>
+            <p id="tentative2"></p>
+            <button type="submit" name="button" id="btn2" class="btn btn-elegant">valider</button>
+          </form>
+          <br>
+          <form id="devinette3" action="" method="" class="text-center">
+            <label for="question3">Trouvez l'errreur : 1 2 3 4 5 6 7 8 9</label><br>
+            <input id="q3" type="text" name="question3" value="">
+            <input id="q3hidden" type="hidden" name="question3hidden" value=""><br>
+            <span id="aideReponse3"></span>
+            <p id="tentative3"></p>
+            <button type="submit" name="button" id="btn3" class="btn btn-elegant">valider</button>
+          </form>
+          <br>
+          <div class="row justify-content-center">
+            <div class="col">
+              <h3 id="score" class="text-center"></h3>
+              <div class="row justify-content-center">
+                <div class="col" id="bravo">
+                    <img src="images/winner.jpg" alt="image_winner" class="rounded mx-auto d-block">
+                </div>
+                <div class="col" id="perdu" >
+                    <img src="images/loser.jpg" alt="image_loser" class="rounded mx-auto d-block">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section id="footer">
+        <!-- Footer -->
+    <footer class="page-footer font-small elegant-color">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-12 py-1">
+            <div class="mb-5 flex-center">
+              <!--Linkedin -->
+              <a class="li-ic" href="https://www.linkedin.com/in/c%C3%A9linegana/" target="_blank">
+                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+              </a>
+              <!--Instagram-->
+              <a class="git-ic" href="https://github.com/celstuv/GameJs" target="_blank">
+                <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+      </div>
+      <!-- Footer Elements -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://www.celinegana.com/">www.celinegana.com</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+  <script src="enigmes.js"></script>
+  <script src="caroussel.js"></script>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+
+</html>
