@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  top: 50%;
+  left : 50%;
+  height: 720px;
+}
+/************* Casse_Briques **************/
+canvas {
+  position : relative;
+  background-color: white;
+  top: 50%;
+  /* left : 50%; */
+}
+
+
+h2 {
+  margin: 40px ;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#brick {
+  background-image : url('images/video-game.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
